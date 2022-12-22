@@ -45,7 +45,7 @@ if (!dev) {
 
 // ! ================== Connect mongodb with mongoose ================== //
 const mongoose = require('mongoose');
-const MONGO_URL = dev ? process.env.MONGO_URL_LOCAL : process.env.MONGO_URL;
+const MONGO_URL = !dev ? process.env.MONGO_URL_LOCAL : process.env.MONGO_URL;
 mongoose.connect(MONGO_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,

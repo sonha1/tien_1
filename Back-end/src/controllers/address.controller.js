@@ -7,6 +7,7 @@ const helpers = require('../helpers');
 const getProvince = async (req, res, next) => {
   try {
     const list = await AddressModel.find({}).select('-districts -_id');
+    console.log(list);
     if (list) {
       return res.status(200).json(list);
     }

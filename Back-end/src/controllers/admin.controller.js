@@ -32,6 +32,7 @@ const uploadProductAvt = async (avtFile, productCode) => {
     const { secure_url } = result;
     return secure_url;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
@@ -246,7 +247,12 @@ const updateProduct = async (req, res, next) => {
 const postLogin = async (req, res, next) => {
   try {
     const { userName, password } = req.body;
-    const adminUser = await AdminModel.findOne({ userName, password });
+    console.log(userName, password);
+    const adminUser = await AdminModel.findOne({
+      username: userName,
+      password,
+    });
+    console.log(await AdminModel.find({}));
     if (adminUser) {
       return res.status(200).json({ name: adminUser.fullName });
     } else {
