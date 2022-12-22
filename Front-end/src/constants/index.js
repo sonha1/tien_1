@@ -1674,7 +1674,7 @@ const PAIR_CONVERT_KEY = [
 
 export default {
   REFRESH_TOKEN_KEY: 'refresh_token',
-  ACCESS_TOKEN_KEY: 'ttb_atk',
+  ACCESS_TOKEN_KEY: 'vas_atk',
   MAX_VERIFY_CODE: 6,
   TRANSPORT_METHOD_OPTIONS,
   GENDER_OPTIONS,

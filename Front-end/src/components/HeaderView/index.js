@@ -79,7 +79,7 @@ function HeaderView() {
     });
 
     return () => {
-      window.removeEventListener('resize');
+      window.removeEventListener('resize', null);
     };
   }, []);
 

@@ -17,27 +17,27 @@ function FooterView() {
         <div className="container d-flex justify-content-between align-i-center">
           <PhoneOutlined className="phone-icon" />
           <div className="d-flex flex-direction-column">
-            <h2 className="footer-contact-item">Tư vấn mua hàng</h2>
+            <h2 className="footer-contact-item">Tư vấn đặt hàng</h2>
             <h2 className="footer-contact-item">
-              <b>0840.67.9081</b>
+              <b>0394.65.4089</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn đào tạo</h2>
             <h2 className="footer-contact-item">
-              <b>0841.67.9111</b>
+              <b>0392.67.9551</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn quảng cáo</h2>
             <h2 className="footer-contact-item">
-              <b>0842.67.9022</b>
+              <b>0312.67.9022</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Hỗ trợ kỹ thuật</h2>
             <h2 className="footer-contact-item">
-              <b>090.267.9011</b>
+              <b>0393 10 7578</b>
             </h2>
           </div>
         </div>
@@ -46,7 +46,7 @@ function FooterView() {
       <div className="container p-tb-32">
         <p className="t-center" style={{ color: '#888' }}>
           <span className="font-size-18px">
-            CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ TTB STORE
+            CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VAS STORE
           </span>
           <br />
           <strong>Trụ sở:</strong>&nbsp;Số 16 VillaD, The Manor, khu đô thị mới
@@ -56,8 +56,8 @@ function FooterView() {
           54 Nguyễn Chí Thanh, Phường 5, Quận 12, Thành phố Hồ Chí Minh
           <br />
           <strong>Điện&nbsp;thoại:</strong>&nbsp;0840.67.9081 |{' '}
-          <strong>Email:</strong>&nbsp;ttbstore@gmail.com&nbsp;|{' '}
-          <strong>Website:</strong>&nbsp;<a href="/">ttbstore.vn</a>
+          <strong>Email:</strong>&nbsp;vasstore@gmail.com&nbsp;|{' '}
+          <strong>Website:</strong>&nbsp;<a href="/">vasstore.vn</a>
         </p>
         <div className="d-flex align-i-center justify-content-center">
           <img src={registeredImg} width={175} />

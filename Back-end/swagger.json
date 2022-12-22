@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "API dành cho trang web TTB Store",
+    "description": "API dành cho trang web VAS Store",
     "version": "1.0.0",
-    "title": "TTB Store API",
+    "title": "VAS Store API",
     "contact": {
       "email": "tuannguyentn2504@gmail.com"
     }
@@ -208,7 +208,7 @@
           "401": {
             "description": "{ failedLoginTimes, message: 'Mật khẩu không đúng !' | errors }"
           },
-          "406":{
+          "406": {
             "description": "{ message: Tài khoản không tồn tại }"
           }
         }

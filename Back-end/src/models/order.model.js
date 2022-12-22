@@ -40,7 +40,7 @@ const orderSchema = new Schema({
   numOfProd: { type: Number, required: true, default: 1 },
 
   // trạng thái đơn hàng
-  // 0 - Đặt hàng thành công, 1 - TTB đã tiếp nhận, 2 - Đang lấy hàng, 3 - Đóng gói xong
+  // 0 - Đặt hàng thành công, 1 - VAS đã tiếp nhận, 2 - Đang lấy hàng, 3 - Đóng gói xong
   // 4 - Bàn giao vận chuyển, 5 - Đang vận chuyển, 6 - Giao hàng thành công
   orderStatus: {
     type: Number,

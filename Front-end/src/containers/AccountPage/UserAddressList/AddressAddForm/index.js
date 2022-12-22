@@ -158,7 +158,7 @@ function AddressAddForm(props) {
             {/* tỉnh thành */}
             <Form.Item
               name="province"
-              rules={[{ required: true, message: '* bắt buộc nhập' }]}>
+              rules={[{ required: false, message: '* bắt buộc nhập' }]}>
               <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
@@ -183,7 +183,7 @@ function AddressAddForm(props) {
             {/* huyễn/ quận */}
             <Form.Item
               name="district"
-              rules={[{ required: true, message: '* bắt buộc nhập' }]}>
+              rules={[{ required: false, message: '* bắt buộc nhập' }]}>
               <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
@@ -205,7 +205,7 @@ function AddressAddForm(props) {
             {/* phường, xã */}
             <Form.Item
               name="wards"
-              rules={[{ required: true, message: '* bắt buộc nhập' }]}>
+              rules={[{ required: false, message: '* bắt buộc nhập' }]}>
               <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
@@ -225,7 +225,7 @@ function AddressAddForm(props) {
             {/* đường */}
             <Form.Item
               name="street"
-              rules={[{ required: true, message: '* bắt buộc nhập' }]}>
+              rules={[{ required: false, message: '* bắt buộc nhập' }]}>
               <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=

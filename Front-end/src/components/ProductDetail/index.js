@@ -14,6 +14,7 @@ import ProductPolicy from './Policy';
 function ProductDetail(props) {
   const { products } = props;
   const { productDetail, productDesc } = products;
+  console.log(products);
   let { catalogs, ...restDetail } = productDetail;
   const { name, brand, type, _id, rate, otherInfo } = products.product;
   restDetail = helpers.convertProductValue(type, restDetail);
