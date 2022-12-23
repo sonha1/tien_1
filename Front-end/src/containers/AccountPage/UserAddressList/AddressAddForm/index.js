@@ -159,7 +159,7 @@ function AddressAddForm(props) {
             <Form.Item
               name="province"
               rules={[{ required: false, message: '* bắt buộc nhập' }]}>
-              <Select
+              {/* <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
                   0
@@ -178,13 +178,19 @@ function AddressAddForm(props) {
                     {item.name}
                   </Option>
                 ))}
-              </Select>
+              </Select> */}
+              <Input
+                className="m-t-16"
+                maxLength={100}
+                placeholder="Tỉnh thành"
+                size="middle"
+              />
             </Form.Item>
             {/* huyễn/ quận */}
             <Form.Item
               name="district"
               rules={[{ required: false, message: '* bắt buộc nhập' }]}>
-              <Select
+              {/* <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
                   0
@@ -200,13 +206,19 @@ function AddressAddForm(props) {
                     {item.name}
                   </Option>
                 ))}
-              </Select>
+              </Select> */}
+              <Input
+                className="m-t-16"
+                maxLength={100}
+                placeholder="Huyện/Quận"
+                size="middle"
+              />
             </Form.Item>
             {/* phường, xã */}
             <Form.Item
               name="wards"
               rules={[{ required: false, message: '* bắt buộc nhập' }]}>
-              <Select
+              {/* <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
                   0
@@ -220,13 +232,20 @@ function AddressAddForm(props) {
                     {item.prefix + ' ' + item.name}
                   </Option>
                 ))}
-              </Select>
+                
+              </Select> */}
+              <Input
+                className="m-t-16"
+                maxLength={100}
+                placeholder="Phường/Xã"
+                size="middle"
+              />
             </Form.Item>
             {/* đường */}
             <Form.Item
               name="street"
               rules={[{ required: false, message: '* bắt buộc nhập' }]}>
-              <Select
+              {/* <Select
                 filterOption={(input, option) =>
                   option.children.toLowerCase().indexOf(input.toLowerCase()) >=
                   0
@@ -239,7 +258,13 @@ function AddressAddForm(props) {
                     {item.prefix + ' ' + item.name}
                   </Option>
                 ))}
-              </Select>
+              </Select> */}
+              <Input
+                className="m-t-16"
+                maxLength={100}
+                placeholder="Đường"
+                size="middle"
+              />
             </Form.Item>
             {/* chi tiết */}
             <Form.Item

@@ -5,10 +5,7 @@ import './index.scss';
 
 function ContactIcon() {
   return (
-    <a
-      className="Contact-Icon-Link"
-      href="https://fb.com/TuanNguyen250400"
-      target="blank">
+    <a className="Contact-Icon-Link" href="#" target="blank">
       <Tooltip title="Liên hệ tư vấn" placement="left">
         <img
           style={{ opacity: 0.8 }}

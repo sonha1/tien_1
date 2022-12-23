@@ -18,7 +18,7 @@ import {
 import Avatar from 'antd/lib/avatar/avatar';
 import loginApi from 'apis/loginApi';
 import defaultAvt from 'assets/imgs/default-avt.png';
-import logoUrl from 'assets/imgs/logo.png';
+import logoUrl from 'assets/imgs/logo.jpg';
 import constants from 'constants/index';
 import helpers from 'helpers';
 import React, { useEffect, useState } from 'react';
