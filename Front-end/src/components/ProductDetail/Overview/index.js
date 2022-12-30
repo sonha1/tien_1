@@ -180,10 +180,16 @@ function ProductOverview(props) {
                 value={numOfProduct}
                 min={1}
                 max={currentStock}
-                onChange={(value) => setNumberOfProduct(value)}
+                onChange={(value) => {
+                  console.log(value);
+                  console.log(currentStock);
+
+                  setNumberOfProduct(value);
+                }}
               />
             </>
           )}
+          {numOfProduct > currentStock ? <p>Số lượng có hạn</p> : <></>}
         </div>
 
         {/* Button*/}
@@ -191,7 +197,7 @@ function ProductOverview(props) {
           <div className="btn-group p-tb-16 d-flex justify-content-around">
             <Button
               onClick={addCart}
-              disabled={stock ? false : true}
+              disabled={stock >= currentStock ? false : true}
               size="large"
               className="m-r-16 w-100 btn-group-item"
               style={{ backgroundColor: '#3555c5' }}>
@@ -200,7 +206,7 @@ function ProductOverview(props) {
 
             <Button
               onClick={addCart}
-              disabled={stock ? false : true}
+              disabled={stock >= currentStock ? false : true}
               size="large"
               className="w-100 btn-group-item"
               style={{ backgroundColor: '#39B3D7' }}>

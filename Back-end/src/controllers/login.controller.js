@@ -107,6 +107,7 @@ const postLoginWithGoogle = async (req, res, next) => {
   try {
     // user from middleware passport
     const { user } = req;
+    console.log(user);
 
     // nếu user có type = local thì báo lỗi
     if (user.authType === 'local') {

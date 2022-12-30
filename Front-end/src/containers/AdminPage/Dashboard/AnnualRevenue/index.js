@@ -18,7 +18,7 @@ function generateLabels(
 }
 
 function AnnualRevenue() {
-  const startYear = 2010;
+  const startYear = 2022;
   const endYear = new Date().getFullYear();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,7 +58,7 @@ function AnnualRevenue() {
       ) : (
         <Bar
           data={{
-            labels: generateLabels(2010, endYear),
+            labels: generateLabels(2022, endYear + 10),
             datasets: [
               {
                 backgroundColor: '#2EA62A',
@@ -70,7 +70,8 @@ function AnnualRevenue() {
             legend: { display: false },
             title: {
               display: true,
-              text: `Doanh thu theo từng năm từ năm ${startYear} đến ${endYear}`,
+              text: `Doanh thu theo từng năm từ năm ${startYear} đến ${endYear +
+                10}`,
               fontSize: 18,
             },
             scales: {

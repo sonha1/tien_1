@@ -11,6 +11,7 @@ function RelatedProduct(props) {
   // Lấy ds sản phẩm
   useEffect(() => {
     let isSubscribe = true;
+    console.log(type, brand, title, span);
     async function getRelatedProducts() {
       try {
         const response = await productApi.getProductList(

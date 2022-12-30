@@ -6,6 +6,9 @@ import TopOrders from './TopOrders';
 
 function Dashboard() {
   return (
+
+    
+  
     <Row className="p-32" gutter={[32, 32]}>
       {/* doanh thu theo tháng */}
       <Col span={24} xl={12}>
@@ -20,11 +23,11 @@ function Dashboard() {
         </div>
       </Col>
       {/* Đơn hàng ở tỉnh nào nhiều nhất */}
-      <Col span={24} xl={12}>
+      {/* <Col span={24} xl={12}>
         <div className="bg-white p-12 bor-rad-8 box-sha-home">
           <TopOrders />
         </div>
-      </Col>
+      </Col> */}
     </Row>
   );
 }

@@ -13,7 +13,7 @@ const loginApi = {
   // api: đăng nhập với google
   postLoginWithGoogle: (accessToken) => {
     const url = LOGIN_API_ENDPOINT + '/gg';
-    return axiosClient.post(url, accessToken);
+    return axiosClient.get(url, accessToken);
   },
 
   // api: authentication

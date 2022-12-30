@@ -3,14 +3,29 @@ import {
   EditOutlined,
   EyeOutlined,
   WarningOutlined,
+  MenuOutlined,
+  ReconciliationOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
-import { message, Pagination, Spin, Table, Tooltip } from 'antd';
+import {
+  message,
+  Pagination,
+  Spin,
+  Table,
+  Tooltip,
+  AutoComplete,
+  Button,
+  Input,
+} from 'antd';
 import Modal from 'antd/lib/modal/Modal';
 import adminApi from 'apis/adminApi';
 import productApi from 'apis/productApi';
 import helpers from 'helpers';
 import React, { useEffect, useState } from 'react';
 import EditProductModal from './EditProductModal';
+import { Link, useLocation } from 'react-router-dom';
 
 function generateFilterType() {
   let result = [];
@@ -25,6 +40,13 @@ function SeeProduct() {
   const [modalDel, setModalDel] = useState({ visible: false, _id: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [list, setList] = useState([]);
+  const [isSmDevice, setIsSmDevice] = useState(false);
+  const options = helpers.autoSearchOptions();
+  const initLink = '/search?keyword=';
+  const [linkSearch, setLinkSearch] = useState('');
+  const locations = useLocation().pathname;
+  const [isMdDevice, setIsMdDevice] = useState(false);
+  const [drawerVisible, setDrawerVisible] = useState(false);
 
   // event: xoá sản phẩm
   const onDelete = async (_id) => {
@@ -189,6 +211,31 @@ function SeeProduct() {
   // rendering ...
   return (
     <div className="pos-relative p-8">
+      <div className="t-right search-bar-wrapper w-100">
+        <div className="search-bar pos-relative">
+          <AutoComplete
+            className="trans-center w-100"
+            options={options}
+            onChange={(value) =>
+              setLinkSearch(helpers.formatQueryString(value))
+            }
+            filterOption={(inputValue, option) =>
+              option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
+              -1
+            }>
+            <Input
+              maxLength={200}
+              size={isSmDevice ? 'middle' : 'large'}
+              placeholder={!isSmDevice ? 'Nhập từ khoá cần tìm' : 'Tìm kiếm'}
+            />
+          </AutoComplete>
+          <Button type="primary" size={isSmDevice ? 'middle' : 'large'}>
+            <Link to={linkSearch === '' ? locations : initLink + linkSearch}>
+              <SearchOutlined /> {!isSmDevice ? 'Tìm kiếm' : ''}
+            </Link>
+          </Button> 
+        </div>
+      </div>
       {isLoading ? (
         <Spin
           tip="Đang tải danh sách sản phẩm ..."
