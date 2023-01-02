@@ -11,7 +11,15 @@ loginApi.post('/', loginController.postLogin);
 // api: login with gg
 loginApi.get(
   '/gg',
-  passport.authenticate('google-token', { session: false }),
+  passport.authenticate('google', (err, result) => {
+    console.log(err);
+    console.log(result);
+  }),
+);
+
+loginApi.get(
+  '/gg/callback',
+  passport.authenticate('google'),
   loginController.postLoginWithGoogle,
 );
 

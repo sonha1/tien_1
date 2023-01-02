@@ -4,10 +4,11 @@ const AccountModel = require('../models/account.models/account.model');
 const UserModel = require('../models/account.models/user.model');
 const jwt = require('jsonwebtoken');
 const express = require('express');
-
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 //authentication with JWT
 const jwtAuthentication = async (req, res, next) => {
   try {
+    console.log(req.locals);
     res.locals.isAuth = false;
     let token = null;
     if (express().get('env') === 'production') token = req.query.token;
@@ -39,11 +40,10 @@ const jwtAuthentication = async (req, res, next) => {
 
 // ! xác thực với google plus
 passport.use(
-  new GooglePlusTokenStrategy(
+  new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      passReqToCallback: true,
     },
     async (accessToken, refreshToken, profile, done) => {
       try {

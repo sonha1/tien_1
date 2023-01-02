@@ -107,6 +107,7 @@ function AddressUserList(props) {
       try {
         setIsLoading(true);
         const response = await addressApi.getDeliveryAddressList(user._id);
+        console.log(response);
         if (isSubscribe && response) {
           setList(response.data.list);
           setIsLoading(false);

@@ -66,10 +66,11 @@ const getDeliveryAddressList = async (req, res, next) => {
         // đổi địa chỉ sang str
         let list = await Promise.all(
           address.list.map(async (item) => {
-            let newAddress = await helpers.convertAddress(item.address);
+            let newAddress = item.address.details;
             return { ...item, address: newAddress };
           }),
         );
+        console.log(list);
         return res.status(200).json({ list: list });
       }
     } else {

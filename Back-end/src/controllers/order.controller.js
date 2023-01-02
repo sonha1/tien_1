@@ -10,6 +10,7 @@ const getOrderList = async (req, res, next) => {
       '-owner -deliveryAdd -paymentMethod -note',
     );
     if (orderList) {
+      console.log(orderList);
       return res.status(200).json({ list: orderList });
     }
     return res.status(200).json({ list: [] });
@@ -27,11 +28,12 @@ const getOrderDetails = async (req, res, next) => {
     if (order) {
       const { deliveryAdd } = order;
       const { name, phone, address } = deliveryAdd;
-      const addressStr = await helpers.convertAddress(address);
+      const addressStr = address.details;
       let newOrder = {
         ...order._doc,
         deliveryAdd: { name, phone, address: addressStr },
       };
+      console.log(newOrder);
       return res.status(200).json({ order: newOrder });
     }
     return res.status(400).json({});

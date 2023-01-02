@@ -19,25 +19,25 @@ function FooterView() {
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn đặt hàng</h2>
             <h2 className="footer-contact-item">
-              <b>0394.65.4089</b>
+              <b>0313.125.1212</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn đào tạo</h2>
             <h2 className="footer-contact-item">
-              <b>0392.67.9551</b>
+              <b>0331.44.1551</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn quảng cáo</h2>
             <h2 className="footer-contact-item">
-              <b>0312.67.9022</b>
+              <b>0123.71.1042</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Hỗ trợ kỹ thuật</h2>
             <h2 className="footer-contact-item">
-              <b>0393 10 7578</b>
+              <b>1213.12.1231</b>
             </h2>
           </div>
         </div>
@@ -49,13 +49,13 @@ function FooterView() {
             CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VAS STORE
           </span>
           <br />
-          <strong>Trụ sở:</strong>&nbsp;Số 16 VillaD, The Manor, khu đô thị mới
-          Mỹ Đình Mễ Trì, Phường 1, Quận 12, Thành phố Hồ Chí Minh
+          <strong>Trụ sở:</strong>&nbsp;141 Đường Chiến Thắng - Tân Triều -
+          Thanh Trì - Hà nội
           <br />
-          <strong>Văn phòng:</strong>&nbsp; Tầng 16, Tòa Văn phòng, Vincom, số
-          54 Nguyễn Chí Thanh, Phường 5, Quận 12, Thành phố Hồ Chí Minh
+          <strong>Văn phòng:</strong>&nbsp; Tầng 16, Tòa Văn phòng, Học viện kỹ
+          thuật mật mã, 141 Đường Chiến Thắng - Tân Triều - Thanh Trì - Hà nội
           <br />
-          <strong>Điện&nbsp;thoại:</strong>&nbsp;0840.67.9081 |{' '}
+          <strong>Điện&nbsp;thoại:</strong>&nbsp;0939.39.2212 |{' '}
           <strong>Email:</strong>&nbsp;vasstore@gmail.com&nbsp;|{' '}
           <strong>Website:</strong>&nbsp;<a href="/">vasstore.vn</a>
         </p>
@@ -65,7 +65,7 @@ function FooterView() {
             <img src={iconPhoneFooter} />
             <div className="t-center m-l-16">
               <h2 style={{ color: '#CE1F26' }}>Hotline</h2>
-              <h2 style={{ color: '#CE1F26' }}>0840.67.9088</h2>
+              <h2 style={{ color: '#CE1F26' }}>0192.44.1314 </h2>
             </div>
           </div>
           <div className="d-flex">

@@ -17,6 +17,7 @@ function OrderDetail(props) {
     async function getOrderDetails() {
       try {
         const response = await orderApi.getOrderDetails(orderId);
+        console.log(response);
         if (isSubscribe && response) {
           setOrder(response.data.order);
           setIsLoading(false);

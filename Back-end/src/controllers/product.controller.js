@@ -42,6 +42,7 @@ const getProductList = async (req, res, next) => {
     const list = await ProductModel.find(query)
       .limit(parseInt(limit))
       .select('-otherInfo -code');
+    console.log(list);
     return res.status(200).json({ data: list });
   } catch (error) {
     return res.status(400).json({ message: 'Không thể lấy dữ liệu' });

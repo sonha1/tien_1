@@ -45,6 +45,7 @@ if (!dev) {
 
 // ! ================== Connect mongodb with mongoose ================== //
 const mongoose = require('mongoose');
+const passport = require('passport');
 const MONGO_URL = !dev ? process.env.MONGO_URL_LOCAL : process.env.MONGO_URL;
 mongoose.connect(MONGO_URL, {
   useUnifiedTopology: true,
@@ -65,6 +66,7 @@ app.listen(PORT, () => {
 
 // ! ================== Routes - Api ================== //
 // api documentations
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // api trang admin
